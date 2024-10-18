@@ -1,0 +1,19 @@
+[package]
+name = "tallyfy"
+version = "0.1.0"
+authors = ["martial-plains <41553768+martial-plains@users.noreply.github.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+dioxus = { git = "https://github.com/DioxusLabs/dioxus.git", features = [
+    "desktop",
+    "router",
+] }
+
+# Debug
+dioxus-logger = "0.5.1"
+enum-iterator = "2.1.0"
+uuid = { version = "1.10.0", features = ["v4"] }
