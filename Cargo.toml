@@ -14,6 +14,6 @@ dioxus = { git = "https://github.com/DioxusLabs/dioxus.git", features = [
 ] }
 
 # Debug
-dioxus-logger = "0.5.1"
+dioxus-logger = "0.6.0"
 enum-iterator = "2.1.0"
 uuid = { version = "1.10.0", features = ["v4"] }
