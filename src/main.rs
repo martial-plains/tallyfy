@@ -17,7 +17,7 @@ use uuid::Uuid;
 mod components;
 mod models;
 
-const STYLE: &str = asset!("./public/styles/tailwind/tailwind.css");
+const STYLE: Asset = asset!("./public/styles/tailwind/tailwind.css");
 
 fn main() {
     // Init logger
@@ -248,7 +248,7 @@ fn App() -> Element {
                         onclick: move |_| handle_add_counter(Counter::default()),
                         img {
                             class: "w-1/2 h-1/2 dark:invert",
-                            src: asset!("public/assets/plus.svg")
+                            src: asset!("public/assets/plus.svg"),
                         }
                     }
                 },
@@ -264,21 +264,19 @@ fn App() -> Element {
                         onclick: move |_| show_filter.set(!show_filter()),
                         img {
                             class: "w-1/2 h-1/2 dark:invert",
-                            src: asset!("public/assets/search.svg")
+                            src: asset!("public/assets/search.svg"),
                         }
                     }
-                    button {
-                        class: "btn btn-ghost btn-circle",
-                        "onclick": "about_modal.showModal()",
+                    button { class: "btn btn-ghost btn-circle", "onclick": "about_modal.showModal()",
                         img {
                             class: "w-1/2 h-1/2 dark:invert",
-                            src: asset!("public/assets/info.svg")
+                            src: asset!("public/assets/info.svg"),
                         }
                     }
                     Modal { id: "about_modal",
                         h1 { class: "text-xl text-center", "Tallyfy" }
                     }
-                }
+                },
             }
 
             div { class: "flex flex-col",
@@ -304,7 +302,7 @@ fn App() -> Element {
                                         ),
                                         onclick: move |_| {
                                             toggle_filter_color(color);
-                                        }
+                                        },
                                     }
                                 }
                             }
@@ -315,12 +313,12 @@ fn App() -> Element {
                                 r#type: "text",
                                 class: "grow",
                                 value: filter_text(),
-                                oninput: move |e| filter_text.set(e.value())
+                                oninput: move |e| filter_text.set(e.value()),
                             }
 
                             img {
                                 class: "w-6 h-6 dark:invert",
-                                src: asset!("public/assets/search.svg")
+                                src: asset!("public/assets/search.svg"),
                             }
                         }
                     }
@@ -338,7 +336,7 @@ fn App() -> Element {
                     onmovebottom: handle_onmovebottom,
                     onmoveup: handle_onmoveup,
                     onmovetop: handle_onmovetop,
-                    onsetcolor: handle_onsetcolor
+                    onsetcolor: handle_onsetcolor,
                 }
             }
         }

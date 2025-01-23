@@ -8,10 +8,7 @@ edition = "2021"
 
 [dependencies]
 
-dioxus = { git = "https://github.com/DioxusLabs/dioxus.git", features = [
-    "desktop",
-    "router",
-] }
+dioxus = { version = "0.6.2", features = ["desktop", "router"] }
 
 # Debug
 dioxus-logger = "0.6.0"
